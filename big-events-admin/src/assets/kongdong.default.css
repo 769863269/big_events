@@ -1,0 +1,14 @@
+@import url('https://fonts.font.im/css?family=Poppins');
+@font-face {
+  font-family: 'albb-45r';
+  src: url('./font/AlibabaHealthFont2.0CN-45R.ttf');
+}
+@font-face {
+  font-family: 'albb-85b';
+  src: url('./font/AlibabaHealthFont2.0CN-85B.ttf');
+}
+
+* {
+  /* 设置全局字体样式 */
+  font-family: 'albb-45r', 'Poppins', sans-serif;
+}

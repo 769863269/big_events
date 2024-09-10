@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    // 解决prettier对于装饰器语法的警告
+    "experimentalDecorators": true,
+    "baseUrl": "./",
+    "paths": {
+      //必须要与 vite.config.js 设置的别名对应
+      "@/*": ["src/*"],
+      "@components/*": ["src/components/*"]
+    }
+  },
+  //提高 IDE 性能
+  "exclude": ["node_modules", "dist", "build"]
+}
