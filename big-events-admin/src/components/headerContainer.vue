@@ -50,7 +50,10 @@ const onCommand = item => {
         <el-dropdown @command="onCommand">
           <div class="userInfo">
             <span>{{ userStore.userInfo.nickname || userStore.userInfo.username }}</span>
-            <el-avatar :size="35" :src="userStore.userInfo.user_pic ? userStore.userInfo.user_pic : defaultAvatar" />
+            <el-avatar
+              :size="35"
+              :src="userStore.userInfo.user_pic ? userStore.userInfo.user_pic : defaultAvatar"
+            />
           </div>
           <template #dropdown>
             <el-dropdown-menu>

@@ -34,6 +34,15 @@ const http = {
     if (data) config.data = data
     return request(config)
   },
+  patch(url, params, data) {
+    const config = {
+      method: 'patch',
+      url: url,
+    }
+    if (params) config.params = params
+    if (data) config.data = data
+    return request(config)
+  },
   delete(url, params) {
     const config = {
       method: 'delete',

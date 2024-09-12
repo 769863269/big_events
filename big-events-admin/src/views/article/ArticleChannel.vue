@@ -14,10 +14,21 @@ const onEditChannel = row => {
   DialogChannelRef.value.open(row)
 }
 const onDelChannel = async row => {
-  const res = await myCateDel(row.id)
-  if (res.code === 0) {
-    ElMessage.success(res.message)
-    getMyCateList()
+  try {
+    const resBox = await ElMessageBox.confirm('确认是否要删除该项?，删除后无法恢复，慎重选择！', '删除提示', {
+      confirmButtonText: '确认删除',
+      cancelButtonText: '取消删除',
+      type: 'warning',
+    })
+    if (resBox === 'confirm') {
+      const res = await myCateDel(row.id)
+      if (res.code === 0) {
+        ElMessage.success(res.message)
+        getMyCateList()
+      }
+    }
+  } catch (err) {
+    console.log(err)
   }
 }
 
